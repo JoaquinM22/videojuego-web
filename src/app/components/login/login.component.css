@@ -1,0 +1,170 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formularios
+{
+    display: flex;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_login
+{
+    width: 400px;
+    height: 400px;
+    font-weight: bold;
+    background: rgba(32, 32, 32);
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #000;
+    border-top: 8px solid rgb(51, 0, 255);
+    padding: 20px 30px;
+    color:white;
+    font-family: arial;
+}
+
+.form_create
+{
+    width: 400px;
+    height: 415px;
+    font-weight: bold;
+    background: rgba(32, 32, 32);
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #000;
+    border-top: 8px solid rgb(51, 0, 255);
+    padding: 20px 30px;
+    color:white;
+    font-family: arial;  
+}
+
+.form_login h3, .form_create h3
+{
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 30px;
+}
+
+.control
+{
+    width: 100%;
+    border: 1px solid rgb(51, 0, 255);
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #252323;
+    font-size: 14px;
+    font-weight: bold;
+    color:white;
+}
+
+.botones
+{
+    width: 100%;
+    height: 40px;
+
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(51, 0, 255);
+
+    border: 1px solid white;
+    margin-bottom: 16px;
+}
+
+.botones:hover
+{
+    color: #ffffff;
+    background-color: rgba(168, 4, 227, 0.784);
+    border-color: #ffffff;
+}
+
+.form_login p, .form_create p
+{
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.form_login, #txt_login
+{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+
+#Password, #Usuario, #UsuarioNuevo, #PasswordNuevo, #PasswordConfirm
+{
+    color: white;
+}
+
+#txt_login
+{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.textoBoton
+{
+    width: 1000px;
+    height: 75px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 16px;
+
+    display: flex;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#botonDeCrearCuenta, #botonDeIniciarSesion
+{
+    color: white;
+    background-color: rgb(51, 0, 255);
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: white;
+
+    padding: 15px 35px;
+    box-shadow: 10px 10px 5px black;
+    display: flex;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    margin: auto;
+    justify-content: center;
+    align-items: center; 
+
+    width: 230px;
+    height: 55px;
+
+}
+
+#botonDeCrearCuenta:hover, #botonDeIniciarSesion:hover
+{
+    color: #ffffff;
+    background-color: rgba(168, 4, 227, 0.784);
+    border-color: #ffffff;
+}

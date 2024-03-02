@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "usuario": "Pepito22",
+      "password": "messigoat12",
+      "puntos": 3206,
+      "partidas": 1
+    }
+  ],
+  "partida": [
+    {
+      "idUsuario": 1,
+      "puntos": 1552,
+      "incorrectas": 1,
+      "correctas": 9,
+      "pistaUsada": 1,
+      "fechaPartida": "2023-11-10T12:04:36.709Z",
+      "id": 1
+    }
+  ]
+}

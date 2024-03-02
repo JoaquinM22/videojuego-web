@@ -1,0 +1,75 @@
+<br>
+
+<h1 class="page_title">INICIO DE SESION</h1>
+
+<section class="formularios">
+
+    <section *ngIf="iniciarSesionCuenta">
+
+        <form id="formularioLogin" action="" class="form_login" [formGroup]="login">
+
+            <h3>Iniciar Sesión</h3>
+            
+            <div *ngIf="login.get('Usuario')?.touched && login.get('Usuario')?.errors?.['required']">Este campo es Requerido</div>
+            <input class="control" type="text" value="" name="usuario" id="Usuario" placeholder="Nombre de Usuario" formControlName="Usuario">
+            
+            <div *ngIf="login.get('Password')?.touched && login.get('Password')?.errors?.['required']">Este campo es Requerido</div>
+            <input class="control" type="password" value="" name="password" id="Password" placeholder="Password" formControlName="Password">
+            
+            <br>
+
+            <button formInicioSesion class="botones" id="ingresar" (click)="logueo_Usuario()">Ingresar</button>
+        
+            <p id="txt_login"></p>
+
+        </form>
+
+    </section>
+
+    
+    
+    <section *ngIf="crearCuentaSesion" class="formulario">
+
+        <form id="formularioCrear" action="" class="form_create" [formGroup]="creacion">
+
+            <h3>Crear Cuenta</h3>
+
+            <div *ngIf="creacion.get('UsuarioNuevo')?.touched && creacion.get('UsuarioNuevo')?.errors?.['required']">Este campo es Requerido</div>
+            <div *ngIf="creacion.get('UsuarioNuevo')?.touched && creacion.get('UsuarioNuevo')?.errors?.['minlength']">El usuario debe tener minimo 3 caracteres</div>
+            <div *ngIf="creacion.get('UsuarioNuevo')?.touched && creacion.get('UsuarioNuevo')?.errors?.['maxlength']">El usuario debe tener max 15 caracteres</div>
+            <input class="control" type="text" value="" name="usuario" id="UsuarioNuevo" placeholder="Nombre de Usuario" formControlName="UsuarioNuevo">
+            
+            <div *ngIf="creacion.get('PasswordNuevo')?.touched && creacion.get('PasswordNuevo')?.errors?.['required']">Estos campos son Requeridos</div>
+            <div *ngIf="creacion.get('PasswordNuevo')?.touched && creacion.get('PasswordNuevo')?.errors?.['minlength']">El password debe tener minimo 3 caracteres</div>
+            <div *ngIf="creacion.get('PasswordNuevo')?.touched && creacion.get('PasswordNuevo')?.errors?.['maxlength']">El password debe tener max 25 caracteres</div>
+            <input class="control" type="password" value="" name="password" id="PasswordNuevo" placeholder="Password" formControlName="PasswordNuevo">
+            <input class="control" type="password" value="" name="passwordC" id="PasswordConfirm" placeholder="Confirme su password">
+            
+            
+            <button class="botones" id="crear" (click)="creacion_Usuario()">Ingresar</button>
+    
+            <p id="texto"></p>
+        </form>
+
+    </section>
+
+
+</section>
+
+<section *ngIf="noTienesCuenta">
+
+    <p class="textoBoton">¿No tienes cuenta? Crea una!</p>
+    <button id="botonDeCrearCuenta" (click)="cambiarDeModoInicio()">Crear Cuenta</button>
+
+</section>
+
+<section *ngIf="volverAIniciar">
+
+    <p class="textoBoton">¿Ya Tienes Cuenta? Inicia Sesion</p>
+    <button id="botonDeIniciarSesion" (click)="cambiarDeModoInicio()">Iniciar Sesion</button>
+
+</section>
+
+<br>
+
+<!-- <app-footer></app-footer> -->
