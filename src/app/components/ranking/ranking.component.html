@@ -1,0 +1,31 @@
+<h1 class="page_title">RANKING</h1>
+
+<p class="texto">Mostrar por:</p>
+
+<select class="botonOpciones" [(ngModel)]="tipoOrdenRanking" id="ordenRnk" name="ordenRanking">
+    <option value="ascendente">Puntos Ascendente</option>
+    <option value="descendente">Puntos Descendente</option>
+</select>
+
+<section>
+    <button class="botonClick" (click)="mostrarRanking()">Aplicar</button>
+    <br><br><br><br><br><br>
+</section>
+
+
+
+<section>
+    <table class="tabla">
+        <thead>
+            <tr class="titulo">
+                <th class="titulo" >Usuario</th>
+                <th class="titulo" >Puntos Totales</th>
+                <th class="titulo" >Partidas Jugadas</th>
+                <th class="titulo" >Puntos Promedio</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpo">
+        </tbody>
+    </table>
+</section>
+<br><br><br><br>

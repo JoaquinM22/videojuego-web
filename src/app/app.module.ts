@@ -8,6 +8,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { LoginComponent } from './components/login/login.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HistorialComponent } from './components/historial/historial.component';
+import { RankingComponent } from './components/ranking/ranking.component';
 
 @NgModule
 ({
@@ -17,7 +18,8 @@ import { HistorialComponent } from './components/historial/historial.component';
     InicioComponent,
     LoginComponent,
     MenuComponent,
-    HistorialComponent
+    HistorialComponent,
+    RankingComponent
   ],
 
   imports:
