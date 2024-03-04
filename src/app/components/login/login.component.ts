@@ -50,8 +50,8 @@ export class LoginComponent implements OnInit
   {
     return this.fb.group
     ({
-      UsuarioNuevo: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
-      PasswordNuevo: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(25)]]
+      UsuarioNuevo: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(15)]],
+      PasswordNuevo: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(25)]]
     });
   }
 
@@ -109,9 +109,9 @@ export class LoginComponent implements OnInit
     const passCre = (<HTMLInputElement>document.getElementById("PasswordNuevo")).value;
     const confPassword = (<HTMLInputElement>document.getElementById("PasswordConfirm")).value;
 
-    if(nombreCre.length >= 3 && nombreCre.length <= 15)
+    if(nombreCre.length >= 8 && nombreCre.length <= 15)
     {
-      if((passCre.length >= 3 && passCre.length <= 25) && (confPassword.length >= 3 && confPassword.length <= 25))
+      if((passCre.length >= 8 && passCre.length <= 25) && (confPassword.length >= 8 && confPassword.length <= 25))
       {
         if(passCre !== confPassword)
         {
@@ -164,7 +164,7 @@ export class LoginComponent implements OnInit
         let mensaje = document.getElementById("texto");
         if(mensaje)
         {
-          mensaje.innerHTML = "Las password deben tener entre 3 y 25 caracteres";
+          mensaje.innerHTML = "Las password deben tener entre 8 y 25 caracteres";
         }
       }
     }else
@@ -172,7 +172,7 @@ export class LoginComponent implements OnInit
       let mensaje = document.getElementById("texto");
       if(mensaje)
       {
-        mensaje.innerHTML = "Nombre de Usuario debe tener entre 3 y 15 caracteres";
+        mensaje.innerHTML = "Nombre de Usuario debe tener entre 8 y 15 caracteres";
       }
     }
   }

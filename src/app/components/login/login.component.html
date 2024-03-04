@@ -35,12 +35,12 @@
             <h3>Crear Cuenta</h3>
 
             <div *ngIf="creacion.get('UsuarioNuevo')?.touched && creacion.get('UsuarioNuevo')?.errors?.['required']">Este campo es Requerido</div>
-            <div *ngIf="creacion.get('UsuarioNuevo')?.touched && creacion.get('UsuarioNuevo')?.errors?.['minlength']">El usuario debe tener minimo 3 caracteres</div>
+            <div *ngIf="creacion.get('UsuarioNuevo')?.touched && creacion.get('UsuarioNuevo')?.errors?.['minlength']">El usuario debe tener minimo 8 caracteres</div>
             <div *ngIf="creacion.get('UsuarioNuevo')?.touched && creacion.get('UsuarioNuevo')?.errors?.['maxlength']">El usuario debe tener max 15 caracteres</div>
             <input class="control" type="text" value="" name="usuario" id="UsuarioNuevo" placeholder="Nombre de Usuario" formControlName="UsuarioNuevo">
             
             <div *ngIf="creacion.get('PasswordNuevo')?.touched && creacion.get('PasswordNuevo')?.errors?.['required']">Estos campos son Requeridos</div>
-            <div *ngIf="creacion.get('PasswordNuevo')?.touched && creacion.get('PasswordNuevo')?.errors?.['minlength']">El password debe tener minimo 3 caracteres</div>
+            <div *ngIf="creacion.get('PasswordNuevo')?.touched && creacion.get('PasswordNuevo')?.errors?.['minlength']">El password debe tener minimo 8 caracteres</div>
             <div *ngIf="creacion.get('PasswordNuevo')?.touched && creacion.get('PasswordNuevo')?.errors?.['maxlength']">El password debe tener max 25 caracteres</div>
             <input class="control" type="password" value="" name="password" id="PasswordNuevo" placeholder="Password" formControlName="PasswordNuevo">
             <input class="control" type="password" value="" name="passwordC" id="PasswordConfirm" placeholder="Confirme su password">
@@ -72,4 +72,4 @@
 
 <br>
 
-<!-- <app-footer></app-footer> -->
+<app-footer></app-footer>

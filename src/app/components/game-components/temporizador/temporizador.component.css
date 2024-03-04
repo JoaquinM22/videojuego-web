@@ -1,0 +1,22 @@
+.contenedorTemporizador
+{
+    justify-content: center;
+    align-items: center;
+}
+
+.temporizador
+{
+    border-radius: 9px;
+    text-decoration: none;
+    color: #ffff;
+    background-color: rgba(255, 0, 0, 0.537);
+    font-family: Arial;
+    font-weight: bold;
+    border: 3px solid;
+    padding: 15px 35px;
+    font-size: 25px;
+    box-shadow: 0 0 2px black;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,94 @@
+#iniciar
+{
+    text-align: center;
+}
+
+.contenedorJuego
+{
+    height: 850px;
+    width: 1120px;
+    margin: 0% 20%; 
+}
+
+.cartelContenedor 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+  
+.cartel
+{
+    background-color: rgb(32, 32, 32);
+    color: white;
+
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+    text-align: center;
+
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: white;
+
+    padding: 15px 35px;
+    box-shadow: 10px 10px 5px black;
+    margin: 10px auto;
+}
+
+.botonOpciones
+{
+    color: white;
+    background-color: rgba(51, 0, 255, 0.784);
+
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: white;
+
+    padding: 15px 35px;
+    box-shadow: 10px 10px 5px black;
+    margin: auto;  
+
+    width: 400px;
+    height: 75px;
+    text-align: center;
+}
+
+.botonOpciones:hover
+{
+    color: #ffffff;
+    background-color: rgba(168, 4, 227, 0.784);
+    border-color: white;
+} 
+
+
+#modoJuego, #empezarLaPartida
+{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#generoJuego, #cancelarLaPartida, #opcionCantFotos, #tiempoJuego
+{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#tiempoJuego
+{
+    margin-right: 10px;
+}
+
+

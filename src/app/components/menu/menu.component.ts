@@ -18,33 +18,28 @@ export class MenuComponent
     
   }
 
-  /*Llama al componente "Mostrar Foto" que lo que contiene en
-  su html es el boton de elegir genero y modo de dificultad, y el
-  boton que llama al componente "mostrarPista" que es el que empieza 
-  la partida*/
-
-  titulo: boolean=true;
-  menu: boolean=true;
-  crearPartida: boolean=false;
-  ranking: boolean=false;
-  perfil: boolean=false;
-  historial: boolean=false;
+  titulo: boolean = true;
+  menu: boolean = true;
+  crearPartida: boolean = false;
+  ranking: boolean = false;
+  perfil: boolean = false;
+  historial: boolean = false;
  
 
   recibiendoDatosDesdeCreadorPartida(mensaje : string)
   {
     if(mensaje == 'false')
     {
-      this.crearPartida= false;
-      this.menu=true;
+      this.crearPartida = false;
+      this.menu = true;
       this.titulo = true;
     }
   }
 
   desabilitarTodosLosComponentes()
   {
-    this.crearPartida=false;
-    this.ranking=false;
+    this.crearPartida = false;
+    this.ranking = false;
     this.perfil = false;
     this.historial = false;
   }

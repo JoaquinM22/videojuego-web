@@ -5,16 +5,26 @@
 
 <section *ngIf="menu" class="menu">
  
-    <button class="botonNuevo" (click)="desabilitarTodosLosComponentes();menu=false;crearPartida=true;titulo=false">Jugar Partida</button>
-    <button class="botonNuevo" (click)="desabilitarTodosLosComponentes();ranking=true">Ranking</button>
-    <button class="botonNuevo" (click)="desabilitarTodosLosComponentes();perfil=true">Ver Perfil</button>
-    <button class="botonNuevo" (click)="desabilitarTodosLosComponentes();historial=true">Historial</button>
-    <button class="botonNuevo" (click)="cartelAdvertencia = true">Cerrar Sesion</button>
+    <button class="botonNuevo" (click)="desabilitarTodosLosComponentes(); menu = false; crearPartida = true; titulo = false">
+        Jugar Partida
+    </button>
+    <button class="botonNuevo" (click)="desabilitarTodosLosComponentes(); ranking = true">
+        Ranking
+    </button>
+    <button class="botonNuevo" (click)="desabilitarTodosLosComponentes(); perfil = true">
+        Ver Perfil
+    </button>
+    <button class="botonNuevo" (click)="desabilitarTodosLosComponentes(); historial = true">
+        Historial
+    </button>
+    <button class="botonNuevo" (click)="cartelAdvertencia = true">
+        Cerrar Sesion
+    </button>
 
 </section>
 
 <div *ngIf="crearPartida">
-    <!-- <app-mostrar-foto (mensajeEnviado)="recibiendoDatosDesdeCreadorPartida($event)"></app-mostrar-foto> -->
+    <app-tipo-partida (mensajeEnviado)="recibiendoDatosDesdeCreadorPartida($event)"></app-tipo-partida> 
 </div>
 
 <div *ngIf="ranking">

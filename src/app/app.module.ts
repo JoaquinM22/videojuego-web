@@ -11,6 +11,9 @@ import { HistorialComponent } from './components/historial/historial.component';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { TipoPartidaComponent } from './components/game-components/tipo-partida/tipo-partida.component';
+import { PartidaComponent } from './components/game-components/partida/partida.component';
+import { TemporizadorComponent } from './components/game-components/temporizador/temporizador.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule
 ({
@@ -23,7 +26,10 @@ import { TipoPartidaComponent } from './components/game-components/tipo-partida/
     HistorialComponent,
     RankingComponent,
     PerfilComponent,
-    TipoPartidaComponent
+    TipoPartidaComponent,
+    PartidaComponent,
+    TemporizadorComponent,
+    FooterComponent
   ],
 
   imports:

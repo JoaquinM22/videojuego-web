@@ -9,9 +9,13 @@ import { Partida } from '../interfaces/partida';
 
 export class UsuariosService
 {
-
   url: string = "http://localhost:3000/users?_sort=puntos&_order=desc";
   urlPartida: string = "http://localhost:3000/partida";
+
+  constructor()
+  {
+
+  }
 
   //Variable que se va a usar en las funciones
   login: Usuario = 
@@ -21,11 +25,6 @@ export class UsuariosService
     password: "",
     puntos: 0,
     partidas: 0
-  }
-
-  constructor()
-  {
-
   }
 
   //Sesion en el storage
@@ -75,6 +74,7 @@ export class UsuariosService
     {
       const resultado = await fetch(this.url);
       const usuarios = resultado.json();
+      console.log("Los users son: ", usuarios);
       return usuarios;
     }catch(error) 
     {
@@ -180,6 +180,15 @@ export class UsuariosService
 
   async guardarPartidaHistorial(puntos: number, incorrectas: number, correctas: number, pistaUsada: number, fechaPartida: Date)
   {
+    console.log("Los datos partida son:",
+    "idUser: ", this.obtenerDatos().id,
+    "puntos: ", puntos,
+    "incorrectas: ", incorrectas,
+    "correctas: ", correctas,
+    "pistaUsada: ", pistaUsada,
+    "fechaPartida: ", fechaPartida
+    );
+
     const agregar =
     {
       idUsuario: this.obtenerDatos().id,

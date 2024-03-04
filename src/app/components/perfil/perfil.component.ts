@@ -10,7 +10,7 @@ import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
 export class PerfilComponent
 {
-  puntaje: number = this.usuariosService.obtenerDatos().puntos
+  puntaje: number = this.usuariosService.obtenerDatos().puntos;
   nombre: string = this.usuariosService.obtenerDatos().usuario;
 
   constructor(private usuariosService: UsuariosService)

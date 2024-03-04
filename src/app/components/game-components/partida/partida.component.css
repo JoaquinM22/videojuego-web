@@ -1,0 +1,502 @@
+.contenedor
+{
+    display: grid ;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: 3;
+    gap: 5px;
+}
+
+.cartelContenedor
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.cartel
+{
+    background-color: rgb(32, 32, 32);
+    color: white;
+
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+    text-align: center;
+
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: white;
+
+    padding: 15px 35px;
+    box-shadow: 10px 10px 5px black;
+    margin: auto;
+}
+
+.botonEmpezar
+{
+    color: white;
+    background-color: rgba(51, 0, 255, 0.784);
+
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: white;
+
+    padding: 15px 35px;
+    box-shadow: 10px 10px 5px black;
+    margin: auto;  
+
+    width: 250px;
+    height: 75px;
+}
+
+.botonEmpezar:hover
+{
+    color: #ffffff;
+    background-color: rgba(168, 4, 227, 0.784);
+    border-color: white;
+} 
+
+.viewPista
+{
+    grid-column: 1/4;
+    grid-row: 2;
+    height: 100%;   
+    width: 100%;
+    color: #ffff;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 3;
+    font-family: Arial;
+}
+
+#VP1
+{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#VP3
+{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#VP4
+{
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.parrafo
+{
+    height: 50px;
+    background: #00fff7;  
+    
+    border-radius: 25px;
+    text-decoration: none;
+    color: rgb(235, 6, 6);
+    font-family: Arial;
+    font-weight: bold;
+    border: 3px solid;
+    padding: 15px 35px;
+    font-size: 11px;
+    box-shadow: 0 0 2px black; 
+}
+
+#blockPuntaje
+{
+    grid-column: 1;
+    grid-row: 1/5; 
+    height: 100%;   
+    width: 95%;
+    margin-top: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.puntaje
+{
+    border-radius: 9px;
+    text-decoration: none;
+    color: #ffff;
+    background-color: rgb(0, 55, 255 0.764);
+    font-family: Arial;
+    font-weight: bold;
+    border: 3px solid;
+    padding: 15px 35px;
+    font-size: 25px;
+    box-shadow: 0 0 2px black;
+    margin: 10px; 
+}
+
+#blockTempo
+{
+    grid-column: 3;
+    grid-row: 1/5; 
+    height: 100%;   
+    width: 95%;
+    margin-top: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewPista div
+{
+    width: 80%;
+    height: 25px;
+    text-align: center;
+    margin: auto;   
+}
+
+.options
+{
+    grid-column: 2 ;
+    grid-row: 3;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorOpciones
+{
+    justify-content: center;
+    align-items: center;
+}
+
+.botonOpcion
+{
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    background-color: #0073ff;
+    font-family: Arial;
+    font-weight: bold;
+    border: 3px solid;
+    padding: 15px 35px;
+    font-size: 25px;
+    box-shadow: 0 0 2px black;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.options button
+{
+    background: #0073ff;  
+    
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    border: 3px solid;
+    padding: 15px 35px;
+    box-shadow: 0 0 2px black;          
+
+    font-size: 25px;
+}
+
+.options button:hover   
+{
+    background: #7300ff;
+}
+
+#left
+{
+    grid-column: 1 ;
+    grid-row: 3;
+    display: grid ;
+    gap: 5px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 3;    
+}
+
+#rigth
+{
+    grid-column: 3;
+    grid-row: 3;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 3;
+    align-items: center;
+}
+
+.pistas button
+{
+    width: 150px;
+    height: 85px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    margin: auto;
+
+    border-radius: 25px;
+    text-decoration: none;
+    color: #000000;
+    background-color:rgba(172, 255, 47, 0.784);
+    font-family: Arial;
+    font-weight: bold;
+    border: 3px solid;
+    padding: 15px 35px;
+    font-size: 20px;
+    box-shadow: 0 0 2px black;
+}
+
+.pistas button:hover
+{
+    color: #ffffff;
+    background-color: rgba(51, 0, 255, 0.784);
+}
+
+.contenedorNuevo
+{
+    justify-content: center;
+    align-items: center;
+}
+
+.puntajeNuevo
+{
+    border-radius: 9px;
+    text-decoration: none;
+    color: #ffff;
+    background-color: rgba(0, 89, 255, 0.537);
+    font-family: Arial;
+    font-weight: bold;
+    border: 3px solid;
+    padding: 15px 35px;
+    font-size: 25px;
+    box-shadow: 0 0 2px black;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*
+//////////// CSS IMAGEN/////////////
+*/
+.centrarImagen
+{
+    text-align: center;
+    margin-top: 12px;
+} 
+
+.imagen
+{
+    text-align: center;
+    justify-content: center;
+    margin: 7px;
+
+    height: 555px;
+    width: 1120px;
+    background-color: #272424f0;
+    border: 1px solid;
+    border-color: white;
+}
+
+.imagen img
+{
+    max-height: 100%;
+    max-width: 100%;   
+}
+
+.parrafito
+{
+    margin: auto;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    background-color:#7300ff96;
+    font-family: Arial;
+    font-weight: bold;
+    border: 3px solid;
+    padding: 15px 35px;
+    font-size: 15px;
+    box-shadow: 0 0 2px black;
+}
+
+.texto
+{
+
+    border-radius: 9px;
+    text-decoration: none;
+    color: #ffff;
+    
+    font-family: Arial;
+    font-weight: bold;
+
+    margin: 0;
+    padding: 0;
+    
+    
+    font-size: 25px;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 50px;
+}
+
+#blockPuntaje, #blockTempo, #contadorFotos
+{
+    margin: 0;
+    padding: 0;
+}
+
+.cartelContenedorNuevito
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.cartelNuevito
+{
+    background-color: rgba(32, 32, 32);
+    color: white;
+
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+    text-align: center;
+
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: white;
+
+    padding: 15px 35px;
+    box-shadow: 10px 10px 5px black;
+    margin: auto;
+}
+
+.botonNuevo
+{
+    color: white;
+    background-color: rgb(51, 0, 255);
+
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: white;
+
+    padding: 15px 35px;
+    box-shadow: 10px 10px 5px black;
+    margin: auto;  
+
+    width: 250px;
+    height: 75px;
+}
+
+.botonNuevo:hover
+{
+    color: #ffffff;
+    background-color: rgba(168, 4, 227, 0.784);
+    border-color: #ffffff;
+} 
+
+#botonIzq, #volverInicio
+{
+    margin-right: 10px;
+}
+
+#botonDer, #jugarOtra
+{
+    margin-left: 10px;
+}
+
+
+
+
+/*
+//////////// CSS BOTONES VOLVER Y CONTADOR/////////////
+*/
+
+.botonVolverYcontador
+{
+    display: flex;
+    align-items: center; 
+}
+
+.botonVolverContenido
+{
+    color: white;
+    background-color: rgb(32, 32, 32);
+
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: rgb(51, 0, 255);
+
+    box-shadow: 10px 10px 5px black;
+
+    width: 315px;
+    height: 75px;
+}
+
+.botonVolverContenido:hover
+{
+    background-color: rgb(168, 4, 227);
+}
+
+.botonContadorFotos
+{
+    color: white;
+    background-color: rgb(51, 0, 255);
+
+    font-size: 35px;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: white;
+
+    box-shadow: 10px 10px 5px black;
+    
+    width: 150px;
+    height: 100px;
+
+    margin-left: 10px;
+}
+
+.flex-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
