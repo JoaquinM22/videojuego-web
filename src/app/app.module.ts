@@ -9,6 +9,8 @@ import { LoginComponent } from './components/login/login.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HistorialComponent } from './components/historial/historial.component';
 import { RankingComponent } from './components/ranking/ranking.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { TipoPartidaComponent } from './components/game-components/tipo-partida/tipo-partida.component';
 
 @NgModule
 ({
@@ -19,7 +21,9 @@ import { RankingComponent } from './components/ranking/ranking.component';
     LoginComponent,
     MenuComponent,
     HistorialComponent,
-    RankingComponent
+    RankingComponent,
+    PerfilComponent,
+    TipoPartidaComponent
   ],
 
   imports:

@@ -182,12 +182,12 @@ export class UsuariosService
   {
     const agregar =
     {
-      idUsuario:this.obtenerDatos().id,
-      puntos:puntos,
-      incorrectas:incorrectas,
-      correctas:correctas,
-      pistaUsada:pistaUsada,
-      fechaPartida:fechaPartida
+      idUsuario: this.obtenerDatos().id,
+      puntos: puntos,
+      incorrectas: incorrectas,
+      correctas: correctas,
+      pistaUsada: pistaUsada,
+      fechaPartida: fechaPartida
     };
 
     const url = "http://localhost:3000/partida";
@@ -228,7 +228,7 @@ export class UsuariosService
       const partidas = resultado.json(); 
       for(const ele of await partidas)
       {
-        if(ele.idUsuario===this.obtenerDatos().id)
+        if(ele.idUsuario === this.obtenerDatos().id)
         {
           partidass.push(ele);
         }
