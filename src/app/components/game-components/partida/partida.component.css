@@ -423,12 +423,12 @@
     border-color: #ffffff;
 } 
 
-#botonIzq, #volverInicio
+#botonIzq, #volverInicio, #aceptarSaltar
 {
     margin-right: 10px;
 }
 
-#botonDer, #jugarOtra
+#botonDer, #jugarOtra, #cancelarSaltar
 {
     margin-left: 10px;
 }

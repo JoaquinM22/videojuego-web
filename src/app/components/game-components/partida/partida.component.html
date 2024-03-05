@@ -102,19 +102,19 @@
             </div>
 
             <div class="contenedorOpciones">
-                <button id="opcion0" class="botonOpcion" (click)="handleOptionButtonClick(juegos[contJuego].nombresOpciones[1])">
+                <button id="opcion1" class="botonOpcion" (click)="handleOptionButtonClick(juegos[contJuego].nombresOpciones[1])">
                     {{juegos[contJuego].nombresOpciones[1]}}
                 </button>
             </div>
 
             <div class="contenedorOpciones">
-                <button id="opcion0" class="botonOpcion" (click)="handleOptionButtonClick(juegos[contJuego].nombresOpciones[2])">
+                <button id="opcion2" class="botonOpcion" (click)="handleOptionButtonClick(juegos[contJuego].nombresOpciones[2])">
                     {{juegos[contJuego].nombresOpciones[2]}}
                 </button>
             </div>
 
             <div class="contenedorOpciones">
-                <button id="opcion0" class="botonOpcion" (click)="handleOptionButtonClick(juegos[contJuego].nombresOpciones[3])">
+                <button id="opcion3" class="botonOpcion" (click)="handleOptionButtonClick(juegos[contJuego].nombresOpciones[3])">
                     {{juegos[contJuego].nombresOpciones[3]}}
                 </button>
             </div>
@@ -176,11 +176,11 @@
 
             <h2>Si saltas pierdes tus pistas</h2>
 
-            <button class="botonEmpezar" (click)="playTemporizadorAux(); saltarFotoPerdiendoPuntos()">
+            <button id="aceptarSaltar" class="botonEmpezar" (click)="playTemporizadorAux(); saltarFotoPerdiendoPuntos()">
                 Aceptar
             </button>
 
-            <button class="botonEmpezar" (click)="cartelAdvertencia=false; playTemporizadorAux()">
+            <button id="cancelarSaltar" class="botonEmpezar" (click)="cartelAdvertencia=false; playTemporizadorAux()">
                 Cancelar
             </button>
 

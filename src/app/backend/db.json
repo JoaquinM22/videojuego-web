@@ -4,44 +4,26 @@
       "id": "1",
       "usuario": "Pepito22",
       "password": "messigoat12",
-      "puntos": 3322,
-      "partidas": 3
+      "puntos": 200,
+      "partidas": 0
     },
     {
-      "id": "11",
-      "usuario": "Juancito14",
-      "password": "cristianoronaldo14",
-      "puntos": 250,
+      "id": 2,
+      "usuario": "agustin12",
+      "password": "elagus12",
+      "puntos": 200,
       "partidas": 0
     }
   ],
   "partida": [
     {
+      "id": "377a",
       "idUsuario": 1,
-      "puntos": 1552,
-      "incorrectas": 1,
-      "correctas": 9,
+      "puntos": 797,
+      "incorrectas": 0,
+      "correctas": 10,
       "pistaUsada": 1,
-      "fechaPartida": "2023-11-10T12:04:36.709Z",
-      "id": "1"
-    },
-    {
-      "id": "ad4a",
-      "idUsuario": "1",
-      "puntos": 3193,
-      "incorrectas": 7,
-      "correctas": 3,
-      "pistaUsada": 0,
-      "fechaPartida": "2024-03-04T20:03:27.899Z"
-    },
-    {
-      "id": "b6c9",
-      "idUsuario": "1",
-      "puntos": 3322,
-      "incorrectas": 7,
-      "correctas": 3,
-      "pistaUsada": 0,
-      "fechaPartida": "2024-03-04T20:40:46.870Z"
+      "fechaPartida": "2024-03-05T23:05:57.149Z"
     }
   ]
 }

@@ -179,8 +179,10 @@ export class LoginComponent implements OnInit
 
   async cargarUsuario(nombre: string, password: string)
   { 
-    let idnuevo = await this.usuariosService.getUltimoID();
+    let idnuevo: number = await this.usuariosService.getUltimoID();
+    console.log("idNuevo: ", idnuevo);
     idnuevo = idnuevo + 1; 
+    console.log("idNuevo con suma: ", idnuevo);
 
     const update: Usuario = 
     {

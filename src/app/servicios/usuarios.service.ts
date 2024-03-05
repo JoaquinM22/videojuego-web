@@ -158,7 +158,7 @@ export class UsuariosService
     });
   }
 
-  getUltimoID(): Promise<any>
+  getUltimoID(): Promise<number>
   {
     return new Promise((resolve, reject) =>
     {
@@ -166,12 +166,20 @@ export class UsuariosService
       .then(res => res.json())
       .then(data =>
       {
-        const pos = data.length - 1;
-        resolve(data[pos].id);
+        console.log(data.length);
+        let num: number = 0;
+        if(data.length == 0)
+        {
+          resolve(num);
+        }else
+        {
+          const pos = data.length - 1;
+          num = Number(data[pos].id);
+          resolve(num);
+        }
       })
       .catch(error =>
       {
-
         console.error("Error en getUltimoID", error);
         reject(error);
       })
