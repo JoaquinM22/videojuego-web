@@ -505,103 +505,11 @@ export class PartidaComponent implements OnInit
     }
   }
 
-
-
-
-  retornarPosCorrecta()
-  {
-    let i = 0;
-    let flag = 0;
-    let posCorrecta;
-    do
-    {
-      if(this.juegos[this.contJuego].nombresOpciones[i] == this.juegos[this.contJuego].nombre)
-      {
-        posCorrecta = i;
-        flag = 1;
-      }else
-      {
-        i++;
-      }
-    }while(flag == 0);
-
-    return posCorrecta;
-  }
-
-  generarArrNumerosRand(min: number, max: number, valorExcluido: number): number[]
-  {
-    // Arreglo para almacenar los números aleatorios
-    const numerosAleatorios: number[] = [];
-  
-    // Bucle para generar dos números aleatorios
-    for(let i = 0; i < 2; i++)
-    {
-      let numeroAleatorio: number;
-  
-      // Bucle interno para asegurar que el número no se repita
-      do
-      {
-        numeroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
-      } while (numerosAleatorios.includes(numeroAleatorio) || numeroAleatorio === valorExcluido);
-  
-      // Agregar el número aleatorio al arreglo
-      numerosAleatorios.push(numeroAleatorio);
-    }
-  
-    // Devolver el arreglo con los dos números aleatorios
-    return numerosAleatorios;
-  }
-
-  /* otraforma()
-  {
-    let posNombreCorrecta = this.retornarPosCorrecta();
-    if(posNombreCorrecta !== undefined)
-    {
-      this.numsRand = this.generarArrNumerosRand(0, 3, posNombreCorrecta);
-      console.log("Arreglo: ", this.numsRand);
-
-      const botonUno = document.getElementById('opcion' + this.numsRand[0]) as HTMLButtonElement;
-      const botonDos = document.getElementById('opcion' + this.numsRand[1]) as HTMLButtonElement;
-
-      this.desabilitarYhablitarBoton('opcion' + this.numsRand[0], true);
-      console.log("Deshabilite botonUno");
-      this.desabilitarYhablitarBoton('opcion' + this.numsRand[1], true);
-      console.log("Deshabilite botonDos"); 
-
-      if(botonUno)
-      {
-        botonUno.disabled = true;
-        botonUno.style.background ='red';
-        console.log("Deshabilite botonUno");
-      }
-
-      if(botonDos)
-      {
-        botonDos.disabled = true;
-        botonDos.style.background ='red';
-        console.log("Deshabilite botonDos");
-      }
-
-      console.log("Llegue al final");
-      this.eliminaOp=true;
-      this.restarPuntos(valores.eliminaOp);
-
-    }else
-    {
-      console.error("Error en posNombreCorrecta()");
-    }
-  } */
-
-
-
-
   pistaEliminaOp()
   {
     let i: number = 0;
-    console.log("Por entrar al while");
     while(i<2)
     {
-      console.log("Entre al while");
       let np: number = Math.floor(Math.random() * 4);
 
       if(this.juegos[this.contJuego].nombresOpciones[np]!=this.juegos[this.contJuego].nombre)
@@ -610,15 +518,12 @@ export class PartidaComponent implements OnInit
         if(miBoton && !miBoton.disabled)
         {
           this.desabilitarYhablitarBoton('opcion'+np,true)
-          console.log("Entre al if: ", i);
           i= i+1;
         }
       }
     }
-    console.log("Sali del while");
     this.eliminaOp = true;
     this.restarPuntos(valores.eliminaOp);
-    console.log("No se rompio");
   }
 
   fotoCompleta()

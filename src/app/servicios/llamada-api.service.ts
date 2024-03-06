@@ -15,7 +15,7 @@ export class LlamadaApiService
     
   }
 
-  getNombresJuegosAPI(i: number, genero: string): Promise<void>
+  getNombresJuegosAPI(i: number, genero: string): Promise<string[]>
   {
     return new Promise((resolve, reject) =>
     {
@@ -42,8 +42,8 @@ export class LlamadaApiService
           arregloDeNombres.push(juego.name);
         }
 
-        this.nombresJuegos = arregloDeNombres;  
-        resolve(); // Resuelve la promesa una vez que los nombres se han cargado
+        //this.nombresJuegos = arregloDeNombres;  
+        resolve(arregloDeNombres); // Resuelve la promesa una vez que los nombres se han cargado
       })
       .catch(error =>
       {
@@ -51,6 +51,43 @@ export class LlamadaApiService
         reject(error);
       });
     });
+  }
+
+  async getNombresJuegosAux(i: number, genero: string, cantFotos: number): Promise<void[] | undefined>
+  {
+    try
+    {
+      let arregloUno: string[] = [];
+      let arregloDos: string[] = [];
+      let arregloTres: string[] = [];
+      switch(cantFotos)
+      {
+        case 10:
+          this.nombresJuegos = await this.getNombresJuegosAPI(i, genero);
+        break;
+
+        case 20:
+          arregloUno = await this.getNombresJuegosAPI(i, genero);
+          arregloDos = await this.getNombresJuegosAPI((i+1), genero);
+
+          this.nombresJuegos = arregloUno.concat(arregloDos);
+        break;
+
+        default:
+          arregloUno = await this.getNombresJuegosAPI(i, genero);
+          arregloDos = await this.getNombresJuegosAPI((i+1), genero);
+          arregloTres = await this.getNombresJuegosAPI((i+2), genero);
+
+          arregloUno = arregloUno.concat(arregloDos);
+          arregloUno = arregloUno.concat(arregloTres);
+          this.nombresJuegos = arregloUno;
+        break;
+      }
+    }catch(error)
+    {
+      console.error("Error al obtener nombres juegos:", error);
+    }
+    return undefined;
   }
 
   //Crea un arreglo de tipo Juego con todos los datos de la API
@@ -81,6 +118,19 @@ export class LlamadaApiService
     }
 
     let arregloDeJuegos: Juego[] = [];
+
+    //Del arreglo nombres, cambia el orden de los datos, de manera que pese a que
+    //siempre cargue las posiciones 0, 1, 2 y 3. Los datos seran siempre al azar
+    function randomizarNombres(arregloNombres: string[])
+    {
+      for(let i = arregloNombres.length - 1; i > 0; i--)
+      {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arregloNombres[i], arregloNombres[j]] = [arregloNombres[j], arregloNombres[i]];
+      }
+    }
+    randomizarNombres(this.nombresJuegos);
+    let pos = 0;
 
     for(const juego of data.results)
     {
@@ -204,23 +254,13 @@ export class LlamadaApiService
         }
       }
 
-      //Del arreglo nombres, cambia el orden de los datos, de manera que pese a que
-      //siempre cargue las posiciones 0, 1, 2 y 3. Los datos seran siempre al azar
-      function randomizarNombres(arregloNombres: string[])
+      //Agrego las opciones incorrectas
+      let nuevosNombresOpciones: any = [];
+      for(let i = 0; i < 4; i++)
       {
-        for(let i = arregloNombres.length - 1; i > 0; i--)
-        {
-          const j = Math.floor(Math.random() * (i + 1));
-          [arregloNombres[i], arregloNombres[j]] = [arregloNombres[j], arregloNombres[i]];
-        }
+        nuevosNombresOpciones.push(this.nombresJuegos[pos]);
+        pos++;
       }
-      // agrego las otras opciones
-      const nuevosNombresOpciones = [];
-      randomizarNombres(this.nombresJuegos);
-      nuevosNombresOpciones.push(this.nombresJuegos[0]);
-      nuevosNombresOpciones.push(this.nombresJuegos[1]);
-      nuevosNombresOpciones.push(this.nombresJuegos[2]);
-      nuevosNombresOpciones.push(this.nombresJuegos[3]);
 
       //Sobreescribo una posicion random por el nombre real del juego.
       const randomNum = Math.floor(Math.random() * 4);
@@ -246,7 +286,8 @@ export class LlamadaApiService
     return new Promise((resolve, reject) =>
     {
       //Primero, espera a que se carguen los nombres
-      this.getNombresJuegosAPI(i, genero)
+      //this.getNombresJuegosAPI(i, genero)
+      this.getNombresJuegosAux(i, genero, cantFotos)
       .then(() =>
       {
         //Ahora que los nombres están disponibles, carga los juegos
@@ -302,7 +343,6 @@ export class LlamadaApiService
         break;
 
         default:
-          //numeroRandom = Math.floor(Math.random() * 200) + 1;
           numeroRandom = Math.floor(Math.random() * (200 - 50 + 1)) + 50;
         break;
       }

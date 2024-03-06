@@ -60,7 +60,7 @@ export class TipoPartidaComponent
 
       default:
         this.minutosService.minutos = 1;
-        this.minutosService.segundos = 1;
+        this.minutosService.segundos = 31;
       break;
     }
   } 

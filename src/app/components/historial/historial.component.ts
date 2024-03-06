@@ -44,8 +44,7 @@ export class HistorialComponent
 
           const puntos = document.createElement("td");
           puntos.style.border = '1px solid rgb(255, 255, 255)';
-          puntos.textContent = String(datos.puntos-puntAnterior);
-          puntAnterior=datos.puntos;
+          puntos.textContent = String(datos.puntos);
           fila.appendChild(puntos);
 
           const incorrectas = document.createElement("td");

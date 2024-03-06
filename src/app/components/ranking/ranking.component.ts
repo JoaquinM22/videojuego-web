@@ -11,7 +11,7 @@ import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
 export class RankingComponent implements OnInit
 {
-  tipoOrdenRanking: string = 'ascendente';
+  tipoOrdenRanking: string = 'descendente';
 
   constructor(private usuariosService: UsuariosService)
   {
@@ -23,7 +23,6 @@ export class RankingComponent implements OnInit
   ngOnInit(): void
   {
     this.mostrarRanking();
-    console.log("Mostre el ranking");
   }
 
   insertarDatosPartidas()
@@ -81,15 +80,23 @@ export class RankingComponent implements OnInit
     {
       case 'descendente':
         this.listaUsuarios = await this.usuariosService.getUsuarios();
-        console.log("Ya obtuve los datos");
-        this.listaUsuarios?.reverse();
-        this.insertarDatosPartidas();
+        if(this.listaUsuarios != undefined)
+        {
+          this.listaUsuarios.sort((a, b) => b.puntos - a.puntos);
+          this.insertarDatosPartidas();
+        }else
+        {
+          console.error("Error en mostrarRanking()");
+        }
       break;
 
       case 'ascendente':
         this.listaUsuarios = await this.usuariosService.getUsuarios();
-        console.log("Ya obtuve los datos");
-        this.insertarDatosPartidas();
+        if(this.listaUsuarios != undefined)
+        {
+          this.listaUsuarios.sort((a, b) => a.puntos - b.puntos);
+          this.insertarDatosPartidas();
+        }
       break;
 
       default:

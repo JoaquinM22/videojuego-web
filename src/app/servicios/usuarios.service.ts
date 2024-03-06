@@ -9,7 +9,7 @@ import { Partida } from '../interfaces/partida';
 
 export class UsuariosService
 {
-  url: string = "http://localhost:3000/users?_sort=puntos&_order=desc";
+  url: string = "http://localhost:3000/users";
   urlPartida: string = "http://localhost:3000/partida";
 
   constructor()
@@ -50,7 +50,7 @@ export class UsuariosService
   {
     const datosActuales = this.obtenerDatos();
 
-    if (datosActuales)
+    if(datosActuales)
     {
       datosActuales.puntos = nuevoDato;
       this.guardarDatos(datosActuales);
@@ -74,7 +74,6 @@ export class UsuariosService
     {
       const resultado = await fetch(this.url);
       const usuarios = resultado.json();
-      console.log("Los users son: ", usuarios);
       return usuarios;
     }catch(error) 
     {
@@ -119,7 +118,7 @@ export class UsuariosService
     {
       console.error('Hubo un error en la solicitud:', error);
     });
-  }
+  } 
 
   async actualizarPuntos( nuevosPuntos: number)
   {
@@ -188,15 +187,6 @@ export class UsuariosService
 
   async guardarPartidaHistorial(puntos: number, incorrectas: number, correctas: number, pistaUsada: number, fechaPartida: Date)
   {
-    console.log("Los datos partida son:",
-    "idUser: ", this.obtenerDatos().id,
-    "puntos: ", puntos,
-    "incorrectas: ", incorrectas,
-    "correctas: ", correctas,
-    "pistaUsada: ", pistaUsada,
-    "fechaPartida: ", fechaPartida
-    );
-
     const agregar =
     {
       idUsuario: this.obtenerDatos().id,
@@ -238,19 +228,21 @@ export class UsuariosService
 
   async getPartidaUsuario(): Promise<Partida[] | undefined>
   {
-    var partidass:Partida[]=[];
     try
     {
+      let arregloPartidas: Partida[] = [];
+
       const resultado = await fetch(this.urlPartida);
       const partidas = resultado.json(); 
-      for(const ele of await partidas)
+
+      for(let ele of await partidas)
       {
-        if(ele.idUsuario === this.obtenerDatos().id)
+        if(ele.idUsuario == this.obtenerDatos().id)
         {
-          partidass.push(ele);
+          arregloPartidas.push(ele);
         }
       }
-      return partidass;
+      return arregloPartidas;
     }catch(error) 
     {
       console.log(error);  

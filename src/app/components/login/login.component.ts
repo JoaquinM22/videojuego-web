@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { Usuario } from 'src/app/interfaces/usuario';
 import { UsuariosService } from 'src/app/servicios/usuarios.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+//import { Server } from 'http';
+//import { ChildProcess, spawn } from 'child_process';
 
 @Component
 ({
@@ -150,6 +152,7 @@ export class LoginComponent implements OnInit
             this.usuariosService.guardarDatos(this.usuarioLogueado);
             this.usuariosService.login = this.usuarioLogueado;
             this.router.navigate(['/menu']);
+            
           }
         }else
         {
