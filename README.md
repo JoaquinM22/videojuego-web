@@ -1,5 +1,8 @@
 # VideojuegoWeb
 
+Videojuego Web que consiste en adivinar un juego seleccionando la respuesta correcta, permite utilizar pistas y ganar puntos.
+Los puntos se guardan en los datos del usuario, permitiendole tambien ver el historial de partidas jugadas y el ranking global.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
 
 ## Development server
