@@ -1,3 +1,4 @@
+
 #iniciar
 {
     text-align: center;
@@ -12,7 +13,7 @@
 
 .cartelContenedor 
 {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -41,7 +42,12 @@
     padding: 15px 35px;
     box-shadow: 10px 10px 5px black;
     margin: 10px auto;
+
+    
+    justify-content: center;
+    align-items: center;
 }
+
 
 .botonOpciones
 {
@@ -78,17 +84,23 @@
 {
     margin-right: 10px;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #generoJuego, #cancelarLaPartida, #opcionCantFotos, #tiempoJuego
 {
     margin-left: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #tiempoJuego
 {
     margin-right: 10px;
-}
+} 
 
+
+
+
+ 
 

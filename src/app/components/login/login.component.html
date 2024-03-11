@@ -24,6 +24,13 @@
 
         </form>
 
+        <section *ngIf="noTienesCuenta">
+
+            <p class="textoBoton">¿No tienes cuenta? Crea una!</p>
+            <button id="botonDeCrearCuenta" (click)="cambiarDeModoInicio()">Crear Cuenta</button>
+        
+        </section>
+
     </section>
 
     
@@ -51,22 +58,15 @@
             <p id="texto"></p>
         </form>
 
+        <section *ngIf="volverAIniciar">
+
+            <p class="textoBoton">¿Ya Tienes Cuenta? Inicia Sesion</p>
+            <button id="botonDeIniciarSesion" (click)="cambiarDeModoInicio()">Iniciar Sesion</button>
+        
+        </section>
+
     </section>
 
-
-</section>
-
-<section *ngIf="noTienesCuenta">
-
-    <p class="textoBoton">¿No tienes cuenta? Crea una!</p>
-    <button id="botonDeCrearCuenta" (click)="cambiarDeModoInicio()">Crear Cuenta</button>
-
-</section>
-
-<section *ngIf="volverAIniciar">
-
-    <p class="textoBoton">¿Ya Tienes Cuenta? Inicia Sesion</p>
-    <button id="botonDeIniciarSesion" (click)="cambiarDeModoInicio()">Iniciar Sesion</button>
 
 </section>
 

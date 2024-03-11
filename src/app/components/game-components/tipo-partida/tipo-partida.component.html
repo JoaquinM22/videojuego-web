@@ -5,59 +5,60 @@
 
         <div class="cartel">
 
-          <h2>Bienvenido</h2>
-          <p>Elige la dificultad, el género de los juegos, el tiempo y la cantidad de fotos</p>
-          <p>Presiona "Empezar" para continuar</p>
-          <p>Presiona "Cancelar" para salir</p>
+            <h2>Bienvenido</h2>
+            <p>Elige la dificultad, el género de los juegos, el tiempo y la cantidad de fotos</p>
+            <p>Presiona "Empezar" para continuar</p>
+            <p>Presiona "Cancelar" para salir</p>
 
-          <select class="botonOpciones" [(ngModel)]="modoSeleccionado" id="modoJuego" name="opcionJuego">
-              <option value="modoNormal">Facil</option>
-              <option value="modoMedio">Normal</option>
-              <option value="modoDificil">Dificil</option>
-          </select>
-
-          <select class="botonOpciones" [(ngModel)]="generoSeleccionado" id="generoJuego" name="opcionGenero">
-              <option value="porDefecto">Todos</option>
-              <option value="action">Accion</option>
-              <option value="indie">Indie</option>
-              <option value="adventure">Aventura</option>
-              <option value="role-playing-games-rpg">RPG</option>
-              <option value="strategy">Estrategia</option>
-              <option value="shooter">Shooter</option>
-              <option value="casual">Casual</option>
-              <option value="simulation">Simulacion</option>
-              <option value="puzzle">Puzzle</option>
-              <option value="arcade">Arcade</option>
-              <option value="platformer">Plataformas</option>
-              <option value="massively-multiplayer">Multijugador masivo</option>
-              <option value="racing">Carreras</option>
-              <option value="sports">Deportes</option>
-              <option value="fighting">Lucha</option>
-              <option value="family">Familiar</option>
-              <option value="board-games">Juegos de Mesa</option>
-              <option value="educational">Educativos</option>
-              <option value="card">De Cartas</option>
-          </select>
-          
-          <select class="botonOpciones" [(ngModel)]="tiempoSeleccionado" id="tiempoJuego" name="opcionTiempo">
-            <option value="tresMinutos">03:00 min</option>
-            <option value="dosMinutos">02:00 min</option>
-            <option value="unMinuto">01:30 min</option>
-          </select>
-
-          <select class="botonOpciones" [(ngModel)]="cantFotosSeleccionado" id="cantFotosJuego" name="opcionCantFotos">
-            <option value="diezFotos">10 Fotos</option>
-            <option value="veinteFotos">20 Fotos</option>
-            <option value="treintaFotos">30 Fotos</option>
-          </select>
-
-          <br>
-
-          <button id="empezarLaPartida" class="botonOpciones" (click)="traerDatosApi()">Empezar</button>
-          <button id="cancelarLaPartida" class="botonOpciones" (click)="enviarDatos('false')">Cancelar</button>
         
+            <select class="botonOpciones" [(ngModel)]="modoSeleccionado" id="modoJuego" name="opcionJuego">
+                <option value="modoNormal">Facil</option>
+                <option value="modoMedio">Normal</option>
+                <option value="modoDificil">Dificil</option>
+            </select>
+
+            <select class="botonOpciones" [(ngModel)]="generoSeleccionado" id="generoJuego" name="opcionGenero">
+                <option value="porDefecto">Todos</option>
+                <option value="action">Accion</option>
+                <option value="indie">Indie</option>
+                <option value="adventure">Aventura</option>
+                <option value="role-playing-games-rpg">RPG</option>
+                <option value="strategy">Estrategia</option>
+                <option value="shooter">Shooter</option>
+                <option value="casual">Casual</option>
+                <option value="simulation">Simulacion</option>
+                <option value="puzzle">Puzzle</option>
+                <option value="arcade">Arcade</option>
+                <option value="platformer">Plataformas</option>
+                <option value="massively-multiplayer">Multijugador masivo</option>
+                <option value="racing">Carreras</option>
+                <option value="sports">Deportes</option>
+                <option value="fighting">Lucha</option>
+                <option value="family">Familiar</option>
+                <option value="board-games">Juegos de Mesa</option>
+                <option value="educational">Educativos</option>
+                <option value="card">De Cartas</option>
+            </select>
+            
+            <select class="botonOpciones" [(ngModel)]="tiempoSeleccionado" id="tiempoJuego" name="opcionTiempo">
+                <option value="tresMinutos">03:00 min</option>
+                <option value="dosMinutos">02:00 min</option>
+                <option value="unMinuto">01:30 min</option>
+            </select>
+
+            <select class="botonOpciones" [(ngModel)]="cantFotosSeleccionado" id="cantFotosJuego" name="opcionCantFotos">
+                <option value="diezFotos">10 Fotos</option>
+                <option value="veinteFotos">20 Fotos</option>
+                <option value="treintaFotos">30 Fotos</option>
+            </select>
+
+            <br>
+
+            <button id="empezarLaPartida" class="botonOpciones" (click)="traerDatosApi()">Empezar</button>
+            <button id="cancelarLaPartida" class="botonOpciones" (click)="enviarDatos('false')">Cancelar</button>
+
         </div>
-    
+
     </div>
 
     <app-partida *ngIf="empezar"  [juegos]="datosJuegos" (mensajeEnviado)="recibindoDatosDesdeJuego($event)"></app-partida>

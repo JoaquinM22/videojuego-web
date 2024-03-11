@@ -1,94 +1,72 @@
 
  .tabla
  {
-    width: 100%;
-    
+    width: 100%; 
     color: white;
     background-color: rgb(32, 32, 32);
-    
     font-family: Arial;
-    font-size:x-large;
-
+    font-size: 2em; 
     border: 1px solid rgb(51, 0, 255);
     border-collapse: collapse;
-
     text-align: center;
- }
- 
- tr, td, th
- {
-    border: 1px solid rgb(51, 0, 255);;
- }
- 
- .texto
- {
+  }
+  
+  tr, td, th
+  {
+    border: 1px solid rgb(51, 0, 255);
+  }
+  
+  .texto
+  {
     color: white;
-
-    font-size: 25px;
+    font-size: 2em;  
     font-weight: bold;
     font-family: Arial;
     text-decoration: none;
- }
- 
- .botonOpciones
- {
+  }
+  
+  .botonOpciones, .botonClick
+  {
     color: white;
     background-color: rgba(51, 0, 255, 0.784);
-
-    font-size: 25px;
+    font-size: 2em;  
     font-weight: bold;
     font-family: Arial;
     text-decoration: none;
-
     border: 5px solid;
     border-radius: 20px;
     border-color: white;
-
-    padding: 15px 35px;
+    padding: 15px 35px; 
     box-shadow: 10px 10px 5px black;
-    margin: auto;  
+    margin: 5px;
+    display: inline-block; 
 
-    width: 355px;
-    height: 75px;
+    width: auto;
+    margin-bottom: 18px;
+  }
+  
+  #ordenRnk
+  {
     margin-right: 10px;
     float: left;
- }
- 
- .botonClick
- {
-    color: white;
-    background-color: rgba(51, 0, 255, 0.784);
+  }
 
-    font-size: 25px;
-    font-weight: bold;
-    font-family: Arial;
-    text-decoration: none;
-
-    border: 5px solid;
-    border-radius: 20px;
-    border-color: white;
-
-    padding: 15px 35px;
-    box-shadow: 10px 10px 5px black;
-    margin: auto;  
-
-    width: 175px;
-    height: 75px;
+  #aplicar
+  {
     margin-left: 10px;
     float: left;
- }
- 
- .botonOpciones:hover, .botonClick:hover
- {
+  }
+  
+  .botonOpciones:hover, .botonClick:hover
+  {
     color: #ffffff;
     background-color: rgba(168, 4, 227, 0.784);
- }
- 
- .titulo
- {
+  }
+  
+  .titulo
+  {
     background-color: rgb(51, 0, 255);
     color: white;
     border: 1px solid white;
- }
- 
- 
+  }
+  

@@ -1,47 +1,43 @@
+
 .menu
 {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: auto;
-    place-items: center;
-
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+  
     font-family: Arial;
     font-weight: bold;
-}
-
-.botonNuevo
-{
+  }
+  
+  .botonNuevo
+  {
     color: white;
     background-color: rgba(51, 0, 255, 0.784);
-
-    font-size: 25px;
+  
+    font-size: 35px;
     font-weight: bold;
     font-family: Arial;
     text-decoration: none;
-
-    border: 5px solid;
+  
+    border: 5px solid white;
     border-radius: 20px;
-    border-color: white;
-
-    padding: 15px 35px;
+    padding: 15px 35px; 
     box-shadow: 10px 10px 5px black;
-    margin: 10px auto;  
-
-    width: 250px;
-    height: 75px;
-}
-
-.botonNuevo:hover
-{
+    margin: 10px;
+  
+    width: auto; 
+    height: auto; 
+  }
+  
+  .botonNuevo:hover
+  {
     color: #ffffff;
     background-color: rgba(168, 4, 227, 0.784);
     border-color: #ffffff;
-}
-
-
-
-
-
+  }
+  
 
 
 
@@ -76,6 +72,7 @@
     padding: 15px 35px;
     box-shadow: 10px 10px 5px black;
     margin: auto;
+    align-items: center;
 }
 
 .boton
@@ -98,6 +95,8 @@
 
     width: 250px;
     height: 75px;
+    margin-top: 10px;
+    align-items: center;
 }
 
 .boton:hover
@@ -116,4 +115,7 @@
 {
     margin-left: 10px;
 }
+
+ 
+
 

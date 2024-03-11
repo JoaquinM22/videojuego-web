@@ -1,16 +1,18 @@
 <h1 class="page_title">HISTORIAL</h1>
 
-<p class="texto">Mostrar por:</p>
+<div>
+    <p class="texto">Mostrar por:</p>
 
-<select class="botonOpciones" [(ngModel)]="tipoOrden" id="orden" name="ordenHistorial">
-    <option value="descendente">Fecha Descendente</option>
-    <option value="ascendente">Fecha Ascendente</option>
-</select>
+    <select class="botonOpciones" [(ngModel)]="tipoOrden" id="orden" name="ordenHistorial">
+        <option value="descendente">Fecha Descendente</option>
+        <option value="ascendente">Fecha Ascendente</option>
+    </select>
 
-<section>
-    <button class="botonClick" (click)="mostrarPorOrdenElegido()">Aplicar</button>
-    <br><br><br><br><br><br>
-</section>
+    <section>
+        <button class="botonClick" (click)="mostrarPorOrdenElegido()" id="aplicar">Aplicar</button>
+        <br><br><br><br><br><br>
+    </section>
+</div>
 
 
 

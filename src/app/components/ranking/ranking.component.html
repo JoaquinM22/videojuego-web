@@ -1,17 +1,18 @@
 <h1 class="page_title">RANKING</h1>
 
-<p class="texto">Mostrar por:</p>
+<div>
+    <p class="texto">Mostrar por:</p>
 
-<select class="botonOpciones" [(ngModel)]="tipoOrdenRanking" id="ordenRnk" name="ordenRanking">
-    <option value="descendente">Puntos Descendente</option>
-    <option value="ascendente">Puntos Ascendente</option>
-</select>
+    <select class="botonOpciones" [(ngModel)]="tipoOrdenRanking" id="ordenRnk" name="ordenRanking">
+        <option value="descendente">Puntos Descendente</option>
+        <option value="ascendente">Puntos Ascendente</option>
+    </select>
 
-<section>
-    <button class="botonClick" (click)="mostrarRanking()">Aplicar</button>
-    <br><br><br><br><br><br>
-</section>
-
+    <section>
+        <button class="botonClick" (click)="mostrarRanking()" id="aplicar">Aplicar</button>
+        <br><br><br><br><br><br>
+    </section>
+</div>
 
 
 <section>
