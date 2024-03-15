@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component
 ({
@@ -7,7 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 
-export class FooterComponent
+export class FooterComponent implements OnInit
 {
+  anioActual: number = 0;
 
+  ngOnInit(): void
+  {
+    const fechaActual = new Date();
+    this.anioActual = fechaActual.getFullYear(); 
+  }
 }

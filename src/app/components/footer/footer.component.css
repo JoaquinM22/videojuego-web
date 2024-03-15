@@ -8,3 +8,43 @@
     left: 0px;
     width: 99%;
 }
+
+.box
+{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+}
+
+#textoFooter
+{
+    margin-left: 10px;
+    color: white;
+    font-family: Arial;
+    font-size: 1em;
+}
+
+#logoRawg
+{
+    border: 2px solid white;
+    width: 45;
+    height: 45;
+}
+
+.boton:hover
+{
+    background-color: rgb(51, 0, 255);
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+#botonAPI
+{
+    margin-right: 15px;
+}
+
+#botonLinkedIn
+{
+    margin-left: 15px;
+}
