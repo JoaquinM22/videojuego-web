@@ -24,6 +24,15 @@ export class LoginComponent implements OnInit
   login!: FormGroup; 
   creacion!: FormGroup;
 
+  password = '';
+  showPassword = false;
+
+
+  togglePassword()
+  {
+    this.showPassword = !this.showPassword;
+  }
+
   usuarioLogueado: Usuario = 
   { 
     id: 0,
@@ -151,6 +160,7 @@ export class LoginComponent implements OnInit
             //NUEVO AL CREAR
             this.usuariosService.guardarDatos(this.usuarioLogueado);
             this.usuariosService.login = this.usuarioLogueado;
+            alert("Usuario Creado con exito");
             this.router.navigate(['/menu']);
             
           }

@@ -14,7 +14,11 @@
             <input class="control" type="text" value="" name="usuario" id="Usuario" placeholder="Nombre de Usuario" formControlName="Usuario">
             
             <div *ngIf="login.get('Password')?.touched && login.get('Password')?.errors?.['required']">Este campo es Requerido</div>
-            <input class="control" type="password" value="" name="password" id="Password" placeholder="Password" formControlName="Password">
+            <input class="control" type="password" [type]="showPassword ? 'text' : 'password'" value="" name="password" id="Password" placeholder="Password" formControlName="Password">
+            
+            <section id="mostrarPasswordCaja">
+                <button id="mostrarPassword" (click)="togglePassword()">Mostrar/Ocultar Contraseña</button>
+            </section>
             
             <br>
 
@@ -49,10 +53,14 @@
             <div *ngIf="creacion.get('PasswordNuevo')?.touched && creacion.get('PasswordNuevo')?.errors?.['required']">Estos campos son Requeridos</div>
             <div *ngIf="creacion.get('PasswordNuevo')?.touched && creacion.get('PasswordNuevo')?.errors?.['minlength']">El password debe tener minimo 8 caracteres</div>
             <div *ngIf="creacion.get('PasswordNuevo')?.touched && creacion.get('PasswordNuevo')?.errors?.['maxlength']">El password debe tener max 25 caracteres</div>
-            <input class="control" type="password" value="" name="password" id="PasswordNuevo" placeholder="Password" formControlName="PasswordNuevo">
-            <input class="control" type="password" value="" name="passwordC" id="PasswordConfirm" placeholder="Confirme su password">
+            <input class="control" type="password" [type]="showPassword ? 'text' : 'password'" value="" name="password" id="PasswordNuevo" placeholder="Password" formControlName="PasswordNuevo">
+            <input class="control" type="password" [type]="showPassword ? 'text' : 'password'" value="" name="passwordC" id="PasswordConfirm" placeholder="Confirme su password">
             
-            
+            <section id="mostrarPasswordCaja">
+                <button id="mostrarPassword" (click)="togglePassword()">Mostrar/Ocultar Contraseña</button>
+            </section>
+
+
             <button class="botones" id="crear" (click)="creacion_Usuario()">Ingresar</button>
     
             <p id="texto"></p>

@@ -4,8 +4,8 @@
       "id": "1",
       "usuario": "Pepito22",
       "password": "messigoat12",
-      "puntos": 512,
-      "partidas": 2
+      "puntos": 1226,
+      "partidas": 4
     },
     {
       "id": "2",
@@ -47,6 +47,24 @@
       "correctas": 3,
       "pistaUsada": 4,
       "fechaPartida": "2024-03-06T20:50:46.862Z"
+    },
+    {
+      "id": "efbb",
+      "idUsuario": "1",
+      "puntos": 1270,
+      "incorrectas": 4,
+      "correctas": 6,
+      "pistaUsada": 1,
+      "fechaPartida": "2024-08-04T20:00:48.577Z"
+    },
+    {
+      "id": "b879",
+      "idUsuario": "1",
+      "puntos": 1251,
+      "incorrectas": 8,
+      "correctas": 2,
+      "pistaUsada": 0,
+      "fechaPartida": "2024-08-04T20:46:23.733Z"
     }
   ]
 }
